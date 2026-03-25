@@ -1,0 +1,131 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bianco);
+  border-bottom: 3px solid var(--viola);
+  box-shadow: 0 2px 16px rgba(110,32,160,0.08);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo-giglio {
+  font-size: 2rem;
+  color: var(--viola);
+  line-height: 1;
+}
+
+.logo-testo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-nome {
+  font-family: var(--font-titolo);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--viola);
+  line-height: 1.1;
+}
+
+.logo-sottotitolo {
+  font-size: 0.72rem;
+  color: var(--grigio);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.navbar-voci {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+  align-items: center;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  font-family: var(--font-corpo);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--testo);
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.navbar-link:hover {
+  background: var(--viola-light);
+  color: var(--viola);
+}
+
+.navbar-link.attivo {
+  color: var(--viola);
+  background: var(--viola-light);
+}
+
+.navbar-capi {
+  background: var(--viola) !important;
+  color: var(--bianco) !important;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+.navbar-capi:hover {
+  background: #5a1882 !important;
+  color: var(--bianco) !important;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--viola);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .navbar-voci {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--bianco);
+    flex-direction: column;
+    padding: 16px;
+    border-bottom: 2px solid var(--viola);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    gap: 4px;
+  }
+
+  .navbar-voci.aperto { display: flex; }
+
+  .navbar-link { width: 100%; text-align: left; }
+}

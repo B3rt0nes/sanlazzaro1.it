@@ -1,0 +1,72 @@
+.chi-siamo { background: var(--grigio-chiaro); }
+
+.chi-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 64px;
+}
+
+.chi-testo p { color: #444; font-size: 1.05rem; }
+
+.chi-valori {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-top: 48px;
+}
+
+.valore-item {
+  background: var(--bianco);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: var(--ombra);
+}
+
+.valore-icona { font-size: 1.8rem; }
+
+.branche-titolo {
+  font-family: var(--font-titolo);
+  font-size: 1.6rem;
+  color: var(--testo);
+  margin-bottom: 28px;
+}
+
+.branca-card { border-radius: var(--radius); }
+
+.branca-header {
+  padding: 24px 20px 16px;
+  color: var(--bianco);
+}
+
+.branca-nome {
+  font-family: var(--font-titolo);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.branca-eta {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+.branca-corpo {
+  padding: 20px;
+  color: #555;
+  font-size: 0.97rem;
+}
+
+@media (max-width: 768px) {
+  .chi-intro { grid-template-columns: 1fr; gap: 28px; }
+  .chi-valori { padding-top: 0; }
+}

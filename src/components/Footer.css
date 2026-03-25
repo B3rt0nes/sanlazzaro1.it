@@ -1,0 +1,112 @@
+.footer {
+  background: #0f0f1a;
+  color: rgba(255,255,255,0.8);
+  margin-top: auto;
+}
+
+.footer-bande {
+  display: flex;
+  height: 5px;
+}
+.footer-bande span { flex: 1; }
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-top: 48px;
+  padding-bottom: 40px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-giglio {
+  font-size: 2.5rem;
+  color: var(--viola);
+}
+
+.footer-nome {
+  font-family: var(--font-titolo);
+  font-size: 1.1rem;
+  color: var(--bianco);
+  font-weight: 600;
+}
+
+.footer-motto {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.footer-col-titolo {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--viola);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-link {
+  display: block;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-family: var(--font-corpo);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 4px 0;
+  text-align: left;
+  transition: color 0.18s;
+}
+.footer-link:hover { color: var(--bianco); }
+
+.footer-info {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-email, .footer-agesci {
+  display: block;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  transition: color 0.18s;
+}
+.footer-email:hover, .footer-agesci:hover { color: var(--viola); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.footer-link-capi {
+  background: none;
+  border: 1px solid rgba(110,32,160,0.5);
+  color: var(--viola);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-family: var(--font-corpo);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.footer-link-capi:hover { background: var(--viola); color: white; }
+
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
